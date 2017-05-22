@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "name": "Meetup konnector",
+  "type": "node",
+  "slug": "meetup",
+  "description": "Bring your meetup calendar into your Cozy",
+  "source": "git://github.com/JbIPS/cozy-konnector-meetup.git",
+  "fields": {
+    "save_folder": {
+      "doctype": "io.cozy.files",
+      "type": "folder"
+    },
+    "account": {
+      "doctype": "io.cozy.accounts",
+      "account_type": "accounttype",
+      "accountFormat": "login,password"
+    }
+  },
+  "locales": {
+    "fr": {
+      "description": "Inscrit vos meetups dans votre calendrier",
+      "permissions": {
+        "events": {
+          "description": "Utilisé pour sauvegarder vos meetups"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "events": {
+      "description": "Required to save your meetup events",
+      "type": "io.cozy.events"
+    },
+    "accounts": {
+      "description": "Required to get the account's data",
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    }
+  },
+  "developer": {
+    "name": "JbIPS",
+    "url": "https://github.com/JbIPS"
+  }
+}
